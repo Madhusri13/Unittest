@@ -21,7 +21,7 @@ public class solution {
 	a.add(1);
 	a.add(2);
 	System.out.println(a.get(0));
-	//System.out.println("Odd Number : "+(k-c)+"\nEven Numbers : "+c);
+	
 	}
 
 }
