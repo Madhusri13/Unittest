@@ -21,6 +21,7 @@ public int divide(){
 		Multiply obj1 = new Multiply(3,2);
 		System.out.println(obj.multiplication());
 		System.out.println(obj1.divide());
+		System.out.println("End");
 	}
 
 }
