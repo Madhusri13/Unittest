@@ -7,5 +7,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ Test_file1.class })
 public class AllTests {
+
 //praveen pk
 }
