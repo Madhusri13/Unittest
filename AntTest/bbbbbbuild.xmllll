@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AntTest" default="create" basedir="D:\AntTest">
+
+	<property name="JAVA_HOME" value="D:\AntTest"></property>
+	<property name="Base" location="D:\AntTest\Hello-World"></property>
+
+	<target name="create" description="create folder">
+
+		<mkdir dir="Hello-World" />
+	</target>
+	<target name="createfile">
+		<echo file="${Base}\Readme.txt" message="Read me first" append="true" />
+	</target>
+	<target name="echo value">
+		<echo>${JAVA_HOME}</echo>
+	</target>
+	<target name="createAnother" description="create directory">
+		<mkdir dir="Destination" />
+	</target>
+
+	<target name="copy" description="copy file">
+		<copy file="${Base}\Readme.txt" todir="D:\AntTest\Destination" />
+	</target>
+
+	<target name="delete" description="delete folder">
+		<delete file="${Base}\Readme.txt"/>
+	</target>
+	
+	 <java classname="test.Main">
+         <arg value="-h"/>
+         <classpath>
+           <pathelement location="dist/test.jar"/>
+           <pathelement path="${java.class.path}"/>
+         </classpath>
+       </java>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</project>
