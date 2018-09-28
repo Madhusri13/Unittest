@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AntTest" default="compile" basedir="D:\Second">
+	
+
+	<target name="compile" description="compile java">
+		<echo>${bin} </echo>
+		<javac srcdir="D:\Praveen\AntTest\src\com\util\" destdir="D:\Second\bin"  />
+	</target>
+
+	<target name="jar" description="jar creation">
+		<jar destfile="D:\Second\lib\app.jar" basedir="D:\Second\bin">
+			<manifest> <attribute name="Main-Class" value="com.util.Hello"/>
+				</manifest>
+		</jar>
+</target>
+	
+	<target name="copy" description="copy file">
+		
+			<copy file="D:\Second\lib\app.jar" todir="D:\Second" />
+			</target>
+<target name="run">
+	<java jar="D:\Second\lib\app.jar" fork ="true"/>
+</target>	
+
+
+</project>
